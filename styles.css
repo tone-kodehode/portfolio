@@ -9,6 +9,7 @@
     --light-font: #D9D9D9;
     --dark-font: #030514;
     --blue: #0d1657;
+    --purple: rgb(85, 26, 139);
 }
 
 h1 {
@@ -25,24 +26,6 @@ p {
     font-size: 18px;
 }
 
-a {
-    text-decoration: none;
-    text-align: center;
-    color: ;
-}
-
-a:hover {
-    color: ;
-}
-
-a:active {
-
-}
-
-li {
-
-}
-
 .dark-theme {
     color: var(--light-font);
     background: rgb(1,2,10);
@@ -53,19 +36,50 @@ li {
 }
 
 body {
-    font-family: 'Lato', sans-serif;    
-}
-
-.main-nav {
-    background: transparent;
+            
 }
 
 main {
-    height: 100vh;
+    font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 7.5vh;
+    padding: 0 5vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: ;
+}
+
+.nav-Link:active {
+    font-weight: 500;
+    color: ;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .container {
