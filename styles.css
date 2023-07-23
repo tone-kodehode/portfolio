@@ -131,7 +131,7 @@ li {
     color: var(--light-color);
 }
 
-.active-link {
+.nav-link.active-link a {
     font-weight: 500;
     color: var(--light-color);
 }

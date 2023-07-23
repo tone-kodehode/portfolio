@@ -1,5 +1,7 @@
-const currentPage = window.location.href;
-const navLinks = document.querySelectorAll('.nav-links a');
+//const currentPage = window.location.href;
+const navLinks = document.querySelectorAll('.nav-link');
+
+console.log(navLinks);
 
 navLinks.forEach(link => {
     if (link.href === currentPage) {
@@ -8,3 +10,4 @@ navLinks.forEach(link => {
         link.classList.remove('active-link'); 
     }
 });
+
