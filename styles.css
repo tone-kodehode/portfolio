@@ -10,7 +10,16 @@
     --light-color: #D9D9D9;
     --dark-color: #030514;
     --blue: #0d1657;
-    --purple: rgb(85, 26, 139);
+
+    --mono-blue-1: #051c6f;
+    --mono-blue-2: #062288;
+    --mono-blue-3: #0728a0;
+ 
+    --purple: #551a8b;
+    --mono-purple-1: #621ea0;
+    --mono-purple-2: #6f22b6;
+    --mono-purple-3: #7c26cb;
+   
 }
 
 
@@ -139,9 +148,12 @@ ul li a.nav-link:hover:after {
 }
 
 .ingress {
-    margin-top: 30px;
+    margin-top: 40px;
     line-height: 1.2;
-    text-shadow: ; 
+    text-shadow: ;
+    width: 95%;
+    text-align: justify;
+
 }
 
 .action-btn {
@@ -180,9 +192,9 @@ ul li a.nav-link:hover:after {
     100% { transform: scale(1.2); opacity: 0; }   
 }
 
-/* .call-to-action {
+.call-to-action {
     color: var(--blue)
-} */
+}
 
 
 
