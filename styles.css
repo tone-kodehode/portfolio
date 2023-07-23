@@ -64,7 +64,14 @@ li {
 .article {  
     width: 50%;
     margin-bottom: 100px;
-  }
+}
+
+.article-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 .main-nav {
     display: flex;
@@ -173,7 +180,9 @@ ul li a.nav-link:hover:after {
     100% { transform: scale(1.2); opacity: 0; }   
 }
 
-
+/* .call-to-action {
+    color: var(--blue)
+} */
 
 
 
