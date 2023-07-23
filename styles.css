@@ -14,7 +14,7 @@
     --mono-blue-1: #051c6f;
     --mono-blue-2: #062288;
     --mono-blue-3: #0728a0;
-    
+
     --tints-blue-1: #1d2d67;
     --tints-blue-1: #364478;
     --tints-blue-1: #4f5b89;
@@ -28,11 +28,11 @@
     --tints-purple-1: #7647a2;
     --tints-purple-1: #885ead;
 
-    --gray: #7E7E7E;
+    
     --mono-gray-1: #575757;
     --mono-gray-2: #646464;
     --mono-gray-3: #717171;    ;
-    --mono-gray-4: #7e7e7e;
+    --gray: #7E7E7E;
     --mono-gray-5: #8a8a8a;
     --mono-gray-6: #979797;
     --mono-gray-7: #a4a4a4;
@@ -89,23 +89,24 @@ li {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-
-.article {  
-    width: 50%;
-    margin-bottom: 100px;
-}
-
-.article-row {
-    display: flex;
-    flex-direction: row;
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
+
+.row {
+    display: flex;
+}
+
+.article {  
+   flex: 1;
+   padding: 20px;
+   /* border: 1px solid #ccc; */
+   margin: 10px;
+   max-width: 500px;
+    
+}
+
 
 .main-nav {
     display: flex;
@@ -167,7 +168,10 @@ ul li a.nav-link:hover:after {
 }
 
 .title {
-    font-size: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     line-height: 1.2;
     text-shadow: ;
 }
