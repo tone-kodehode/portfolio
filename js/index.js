@@ -1,4 +1,4 @@
-//const currentPage = window.location.href;
+const currentPage = window.location.href;
 const navLinks = document.querySelectorAll('.nav-link');
 
 console.log(navLinks);
