@@ -63,6 +63,7 @@ li {
 
 .article {  
     width: 50%;
+    margin-bottom: 100px;
   }
 
 .main-nav {
@@ -80,12 +81,22 @@ li {
     justify-content: space-around;
     gap: 30px;
     font-weight: 400;
+    color: #979797;
+}
+
+.nav-link:hover {
+    color: #7E7E7E;
+}
+
+.nav-Link:active {
+    font-weight: 500;
+    color: var(--purple);
 }
 
 ul li a.nav-link:before {
     content: "";
     width: 0;
-    height: 5px;
+    height: 2px;
     background-color: var(--purple);
     position: absolute;
     top: 120%;
@@ -96,7 +107,7 @@ ul li a.nav-link:before {
 ul li a.nav-link:after {
     content: "";
     width: 0;
-    height: 5px;
+    height: 2px;
     background-color: var(--blue);
     position: absolute;
     top: 120%;
@@ -114,11 +125,6 @@ ul li a.nav-link:hover:after {
     transform: translateX(-100%)
 }
 
-.nav-Link:active {
-    font-weight: 500;
-    color: ;
-}
-
 .title {
     font-size: 70px;
     line-height: 1.2;
@@ -126,13 +132,45 @@ ul li a.nav-link:hover:after {
 }
 
 .ingress {
-    margin-top: 50px;
+    margin-top: 30px;
     line-height: 1.2;
     text-shadow: ; 
 }
 
-.call-to-action {
-    color: var(--light-color); 
+.action-btn {
+    margin-top: 40px;
+    margin-right: 70px;
+    float: right;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.action-btn:hover:before, .action-btn:hover:after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    right: -20px;
+    bottom: -10px;
+    border: 1px solid var(--purple);
+    
+    border-radius: 5px;
+    animation: pulsing 1.5s linear infinite;
+}
+
+.action-btn:hover:after {
+    animation-delay: 0.5s;
+}
+
+@keyframes pulsing {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }   
 }
 
 
