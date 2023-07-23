@@ -95,7 +95,7 @@ li {
     overflow-y: scroll;
 }
 
-.row {
+.article-row {
     display: flex;
 }
 
