@@ -36,22 +36,44 @@
 //     }
 // });
 
+
+
+// const navLink = document.querySelectorAll('.nav-link');
+// const windowPathname = window.location.pathname;
+
+// function markActiveLink(){
+//     navLink.forEach(navLink => {
+//         const a = window.location.href.includes(navLink.href)
+//             console.log(a, window.location.fragment)
+//                 if (a) {
+//                     navLink.classList.add('active');
+//                     console.log(navLink, 'active');
+//                 } else {
+//                     navLink.classList.remove('active');
+//                     console.log(navLink, 'remove');
+//                 }
+//     });
+// }
+
 const navLink = document.querySelectorAll('.nav-link');
+const currentPage = window.location.href;
 const windowPathname = window.location.pathname;
 
-function markActiveLink(){
-    navLink.forEach(navLink => {
-        const a = window.location.href.includes(navLink.href)
-            console.log(a, window.location.fragment)
-                if (a) {
-                    navLink.classList.add('active');
-                    console.log(navLink, 'active');
-                } else {
-                    navLink.classList.remove('active');
-                    console.log(navLink, 'remove');
-                }
-    });
-}
+console.log(currentPage);
+
+navLink.forEach((link) => {
+    console.log('WTF?');
+    if (link.href == currentPage) {
+        link.classList.add('active');
+        console.log(link, 'active');
+    } else {
+        link.classList.remove('active')
+        console.log(link, 'remove');
+    }
+})
+
+
+
 
 
 

@@ -6,6 +6,7 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
+
 :root {
     --light-color: #D9D9D9;
     --dark-color: #030514;
@@ -47,7 +48,6 @@
    
 }
 
-
 h1 {
     font-size: 44px;
     line-height: 52px;
@@ -84,6 +84,7 @@ li {
 
 .light-theme {
     background: var(--light-color);
+    color: var(--dark-color);
     min-height: 100vh;
     min-width: 100vh;
 }
@@ -97,18 +98,38 @@ li {
 
 .article-row {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom:20px;
 }
 
 .article {  
    flex: 1;
    padding: 20px;
-   /* border: 1px solid #ccc; */
+   /* border: 1px solid pink; */
    margin: 10px;
-   max-width: 500px;
-    
+   max-width: 500px;  
 }
 
+.title {
+    font-size: 100px;
+    line-height: 1.2;
+    text-shadow: ;
+}
+
+.header {
+    padding-bottom: 30px;
+}
+
+.ingress {
+    margin-top: 30px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: ;
+    width: 95%;
+    text-align: justify;
+}
+
+
+/* nav */
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -128,21 +149,26 @@ li {
     color: var(--gray)
 }
 
-.active {
-    color: var(--light-color);
-}
-
 .nav-link:hover {
     color: var(--light-color);
 }
+/*  */
 
-.nav-link.active-link a {
-    font-weight: 500;
-    color: var(--light-color);
-    border: 1px pink;
+
+/* js pink */
+.active {
+    color: pink;
 }
 
+.nav-link .active {
+    font-weight: 500;
+    color: pink;
+    border: 10px pink;
+}
+/*  */
 
+
+/* nav animation */
 ul li a.nav-link:before {
     content: "";
     width: 0;
@@ -174,75 +200,56 @@ ul li a.nav-link:hover:after {
     width: 50%;
     transform: translateX(-100%)
 }
+/*  */
 
-.title {
-    line-height: 1.2;
-    text-shadow: ;
-}
 
-.ingress {
+/* action btn animation */
+.action-btn {
     margin-top: 40px;
-    line-height: 1.2;
-    text-shadow: ;
-    width: 95%;
-    text-align: justify;
-
-}
-
-/* .action-btn {
-    margin-top: 40px;
-    margin-right: 70px;
     float: right;
-    width: 150px;
-    height: 40px;
     border-radius: 5px;
     text-align: center;
     line-height: 20px;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
-}
-
-.action-btn:hover:before, .action-btn:hover:after {
-    content: "";
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    right: -20px;
-    bottom: -10px;
-    border: 1px solid var(--purple);
-    
-    border-radius: 5px;
-    animation: pulsing 1.5s linear infinite;
-}
-
-.action-btn:hover:after {
-    animation-delay: 0.5s;
-}
-
-@keyframes pulsing {
-    0% { transform: scale(0.5); opacity: 0; }
-    50% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.2); opacity: 0; }   
-} */
-
-.action-btn {
-    float: right;
-    margin-top: 10px;
-    background-color: red;
-    position: relative;
-    
- 
-    
-    font-size: 20px;
     letter-spacing: 1px;
 }
 
-.call-to-action:before {
-   content: "";
-   position:;
-   top: =;
+.action-btn:before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--purple);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: all 0.5s;
 }
 
+.action-btn:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--blue);
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.action-btn:hover:before {
+    width: 50%;
+    transform: translateX(100%)
+}
+
+.action-btn:hover:after {
+    width: 50%;
+    transform: translateX(-100%)
+}
+/*  */
+
+
+/* animation landing page */
 .animation-effect {
     position: relative;
     width: 300px;
@@ -262,8 +269,9 @@ ul li a.nav-link:hover:after {
 }
 
 @keyframes animate {
-    0%, 0% { transform: translateZ(-100px) }
-    50% { transform: translateZ(100px) }   
+    0% { transform: translateZ(100px) }
+    30% { transform: translateZ(50px) }
+    100% { transform: translateZ(-100px) }
 }
 
 .animation-effect span:nth-child(1) {
@@ -385,8 +393,7 @@ ul li a.nav-link:hover:after {
     right: 140px;
     animation-delay: 0s;
 }
-
-
+/*  */
 
 
 
