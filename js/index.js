@@ -3,17 +3,40 @@ const windowPathname = window.location.pathname;
 
 navLink.forEach(navLink => {
     if (navLink.href) {
-        try {
-            const navLinkPathname = new URL(navLink.href).pathname;
+        if (navLink.href.startsWith("mailto:")) {
+           
+            return;
+        }
 
-            if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLink.getAttribute('href') === "#")) {
+        if (navLink.getAttribute('href') === "#") {
+            
+            if (windowPathname === '/index.html' && window.location.hash === "") {
                 navLink.classList.add('active');
+                console.log(navLink, 'active');
+            } else {
+                navLink.classList.remove('active');
+                console.log(navLink, 'remove');
             }
-        } catch (error) {
+        } else {
+           
+            try {
+                const navLinkPathname = new URL(navLink.href).pathname;
 
-            console.error(`Invalid URL: ${navLink.href}`);
+                if (windowPathname === navLinkPathname) {
+                    navLink.classList.add('active');
+                    console.log(navLink, 'active');
+                } else {
+                    navLink.classList.remove('active');
+                    console.log(navLink, 'remove');
+                }
+            } catch (error) {
+                console.error(`Invalid URL: ${navLink.href}`);
+            }
         }
     }
 });
 
 
+
+  
+  
