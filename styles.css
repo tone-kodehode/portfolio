@@ -236,7 +236,7 @@ ul li a.nav-link:hover:after {
     transform: perspective(500px) rotateX(60deg);
 }
 
-.call-to-action span {
+.animation-effect span {
     position: absolute;
     display: block;
     border: 2px solid var(--purple);
