@@ -96,17 +96,19 @@ li {
     overflow-y: scroll;
 }
 
-.article-row {
-    display: flex;
-    margin-bottom:20px;
-}
-
 .article {  
    flex: 1;
    padding: 20px;
-   /* border: 1px solid pink; */
+   /* border: 1px solid pink;  */
    margin: 10px;
    max-width: 500px;  
+}
+
+.projects {
+    max-width: 1000px;
+    margin: 10px;
+    padding: 20px;
+    /* border: 1px solid pink; */
 }
 
 .title {
@@ -133,11 +135,12 @@ li {
 .main-nav {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    min-width: 100vw;
     height: 7.5vh;
     padding: 0 5vw;
     position: fixed;
     bottom: 0;
+    /* border: 1px solid pink; */
 }
 
 .nav-link {
@@ -160,10 +163,10 @@ li {
     color: pink;
 }
 
-.nav-link .active {
+.nav-link > .active {
     font-weight: 500;
     color: pink;
-    border: 10px pink;
+    border: 10px solid pink;
 }
 /*  */
 
@@ -393,6 +396,74 @@ ul li a.nav-link:hover:after {
     right: 140px;
     animation-delay: 0s;
 }
+/*  */
+
+/* slider */
+.card-slider {
+    display: flex; 
+    overflow: hidden;
+    width: 700px;
+    border: 1px solid red;
+}
+/*  */
+
+/* projects card */
+.mobile-first {
+    position: relative;
+    width: 360px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+
+.mobile-first:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: pink;
+    border-radius: 10px;
+}
+
+.mobile-first:after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: red;
+    border-radius: 50%;
+}
+
+.mobile-content {
+    width: ;
+    height: ;
+    background: fit-content;
+}
+
+.card-iframe {
+    width: 100%;
+    border: none;
+    height: 100%;
+}
+
+.togglePC-onHover {
+    
+}
+
+.pc-content {
+
+}
+
 /*  */
 
 
