@@ -55,22 +55,46 @@
 //     });
 // }
 
-const navLink = document.querySelectorAll('.nav-link');
-const currentPage = window.location.href;
-const windowPathname = window.location.pathname;
+// const navLink = document.querySelectorAll('.nav-link');
+// const currentPage = window.location.href;
+// const windowPathname = window.location.pathname;
 
-console.log(currentPage);
+// console.log(currentPage);
 
-navLink.forEach((link) => {
-    console.log('WTF?');
-    if (link.href == currentPage) {
-        link.classList.add('active');
-        console.log(link, 'active');
+// navLink.forEach((link) => {
+//     console.log('WTF?');
+//     if (link.href == currentPage) {
+//         link.classList.add('active');
+//         console.log(link, 'active');
+//     } else {
+//         link.classList.remove('active')
+//         console.log(link, 'remove');
+//     }
+// })
+
+
+const navLink = document.querySelectorAll('.nav-link')
+const location = window.location.pathname;
+
+function locationHashChanged() {
+    if (navLink.getAttribute('href') === "#home") {
+        navLink.classList.add('active')
     } else {
-        link.classList.remove('active')
-        console.log(link, 'remove');
+        navLink.classList.remove('active')
     }
-})
+  }
+  
+  window.addEventListener("hashchange", locationHashChanged);
+
+ 
+  
+
+
+
+   
+    
+
+
 
 
 

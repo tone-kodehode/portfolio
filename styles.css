@@ -99,16 +99,16 @@ li {
 .article {  
    flex: 1;
    padding: 20px;
-   /* border: 1px solid pink;  */
    margin: 10px;
-   max-width: 500px;  
+   max-width: 500px;
+   border: 1px solid pink;  
 }
 
 .projects {
     max-width: 1000px;
     margin: 10px;
     padding: 20px;
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
 }
 
 .title {
@@ -127,7 +127,6 @@ li {
     letter-spacing: 1px;
     text-shadow: ;
     width: 95%;
-    text-align: justify;
 }
 
 
@@ -140,7 +139,7 @@ li {
     padding: 0 5vw;
     position: fixed;
     bottom: 0;
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
 }
 
 .nav-link {
@@ -216,6 +215,7 @@ ul li a.nav-link:hover:after {
     font-size: 18px;
     position: relative;
     letter-spacing: 1px;
+    margin-right: 20px;
 }
 
 .action-btn:before {
@@ -402,58 +402,61 @@ ul li a.nav-link:hover:after {
 .card-slider {
     display: flex; 
     overflow: hidden;
-    width: 700px;
+    max-width: 1000px;
+    height: inherit;
     border: 1px solid red;
 }
 /*  */
 
 /* projects card */
+
+/* The device with borders */
 .mobile-first {
-    position: relative;
-    width: 360px;
-    margin: auto;
-    border: 16px black solid;
-    border-top-width: 60px;
-    border-bottom-width: 60px;
-    border-radius: 36px;
+
 }
 
+/* The horizontal line on the top of the device */
 .mobile-first:before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 5px;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: pink;
-    border-radius: 10px;
+
 }
 
+/* The circle on the bottom of the device */
 .mobile-first:after {
-    content: "";
-    display: block;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    left: 50%;
-    bottom: -65px;
-    transform: translate(-50%, -50%);
-    background: red;
-    border-radius: 50%;
+    
 }
 
+/* The screen (or content) of the device */
 .mobile-content {
-    width: ;
-    height: ;
-    background: fit-content;
+      
 }
 
-.card-iframe {
+.card-img {
     width: 100%;
     border: none;
     height: 100%;
+}
+
+img {
+    width: 180px;
+    height: 370px;
+    /* width: 310;
+    height: 640px; */
+
+    /* width: 170px;
+    height: 325px; */
+    z-index: -2;   
+
+    /* w 360 h 640 samsung s5
+    width: 180px;
+    height: 320px;
+*/
+
+    /* iphone 360 640 */
+
+    /* width: 180;
+    height: 370; */
+    /* width: 360;
+    height: 640; */
 }
 
 .togglePC-onHover {
@@ -464,7 +467,12 @@ ul li a.nav-link:hover:after {
 
 }
 
-/*  */
+
+
+
+
+
+
 
 
 
