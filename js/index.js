@@ -1,3 +1,45 @@
+const cardSlider = document.querySelector(".card-slider");
+const cardsContainer = document.querySelector("#cards");
+
+const leftButton = document.getElementById("left");
+const rightButton = document.getElementById("right");
+
+const cardWidth = cardsContainer.querySelector(".card-row").offsetWidth;
+
+let currentCardIndex = 0;
+
+function slideCards() {
+    cardsContainer.style.transform = `translateX(-${cardWidth * currentCardIndex}px)`;  
+}
+
+function nextCard() {
+    currentCardIndex++;   
+    if (currentCardIndex >= cardsContainer.children.length) {
+        currentCardIndex = 0;
+    }
+    slideCards();
+}
+
+function prevCard() {
+    currentCardIndex--;
+    if (currentCardIndex < 0) {
+        currentCardIndex = cardsContainer.children.length - 1;
+    }
+    slideCards();
+}
+
+rightButton.addEventListener("click", nextCard);
+leftButton.addEventListener("click", prevCard);
+
+
+
+
+
+
+
+
+
+
 // const navLink = document.querySelectorAll('.nav-link');
 // const windowPathname = window.location.pathname;
 
@@ -73,18 +115,54 @@
 // })
 
 
-const navLink = document.querySelectorAll('.nav-link')
-const location = window.location.pathname;
 
-function locationHashChanged() {
-    if (navLink.getAttribute('href') === "#home") {
-        navLink.classList.add('active')
-    } else {
-        navLink.classList.remove('active')
-    }
-  }
+
+// const navLink = document.querySelectorAll('.nav-link')
+// const location = window.location.pathname;
+
+// function locationHashChanged() {
+//     if (navLink.getAttribute('href') === "#home") {
+//         navLink.classList.add('active')
+//     } else {
+//         navLink.classList.remove('active')
+//     }
+//   }
   
-  window.addEventListener("hashchange", locationHashChanged);
+//   window.addEventListener("hashchange", locationHashChanged);
+
+
+
+
+// const navLink = document.querySelectorAll(".nav-link");
+
+// window.addEventListener("hashchange", () => {
+//   const currentLocation = window.location.hash;
+//   navLink.forEach((navLink) => {
+//     if (navLink.getAttribute("href") === currentLocation) {
+//       navLink.classList.add("active");
+//     } else {
+//       navLink.classList.remove("active");
+//     }
+//   });
+// });
+
+
+// const navLink = document.querySelectorAll(".nav-link");
+
+// window.addEventListener("hashchange", () => {
+//   const currentLocation = window.location.hash;
+//   navLink.forEach((navLink) => {
+//     if (navLink.getAttribute("href") === currentLocation) {
+//       navLink.classList.add("active");
+//     } else {
+//       navLink.classList.remove("active");
+//     }
+//   });
+// });
+
+
+
+
 
  
   

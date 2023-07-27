@@ -104,12 +104,7 @@ li {
    border: 1px solid pink;  
 }
 
-.projects {
-    max-width: 1000px;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid pink;
-}
+
 
 .title {
     font-size: 100px;
@@ -160,13 +155,9 @@ li {
 /* js pink */
 .active {
     color: pink;
+    font-weight: 500;
 }
 
-.nav-link > .active {
-    font-weight: 500;
-    color: pink;
-    border: 10px solid pink;
-}
 /*  */
 
 
@@ -398,53 +389,125 @@ ul li a.nav-link:hover:after {
 }
 /*  */
 
+.projects {
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    /* border: 1px solid blue; */
+}
+
 /* slider */
 .card-slider {
-    display: flex; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    max-width: 1000px;
-    height: inherit;
-    border: 1px solid red;
 }
+
+.cards {
+    display: block;
+   
+    display: flex;
+   
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+
+    /* border: 1px solid orange; */
+    width: 612px;
+    margin-bottom: 15px;
+}
+
+.card-row {
+    display: flex;
+    
+    /* border: 1px solid yellow; */
+}
+
+/* navigation  */
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+
+    /* border: 1px solid lightgreen; */
+}
+
+.btn {
+    background-color: transparent;
+    color: blue;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    width: 49.4%;
+
+    /* border: 1px solid orange; */
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* card  */
+
+
+
+
 /*  */
 
-/* projects card */
-
-/* The device with borders */
-.mobile-first {
-
-}
-
-/* The horizontal line on the top of the device */
-.mobile-first:before {
-
-}
-
-/* The circle on the bottom of the device */
-.mobile-first:after {
+.card-info {
+    width: 450px;
+    padding-right: 5%;
+    padding-left: 30%;
     
+
 }
 
-/* The screen (or content) of the device */
-.mobile-content {
-      
+/* projects card */
+.mobile-first {  
+    display: inline-block;
+    width: 180px;
+    height: 370px;
+    margin: auto;
+  
+    border-radius: 29px;
+    box-shadow: 0 8px 6px -6px black;
+
+    border: 4px solid pink;
+}
+
+.lens {
+   
+    border-radius: 25px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width: 40px;
+    border: 1px solid black;
 }
 
 .card-img {
+    
     width: 100%;
     border: none;
     height: 100%;
+    border-radius: 26px;
+    border: 6px solid var(--dark-color);
 }
 
 img {
     width: 180px;
     height: 370px;
+
     /* width: 310;
     height: 640px; */
 
     /* width: 170px;
     height: 325px; */
-    z-index: -2;   
+
+    /* z-index: -2;    */
 
     /* w 360 h 640 samsung s5
     width: 180px;
@@ -466,7 +529,6 @@ img {
 .pc-content {
 
 }
-
 
 
 
