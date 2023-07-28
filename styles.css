@@ -135,6 +135,7 @@ li {
     position: fixed;
     bottom: 0;
     border: 1px solid pink;
+    z-index: 99;
 }
 
 .nav-link {
@@ -153,9 +154,19 @@ li {
 
 
 /* js pink */
-.active {
+/* .active {
     color: pink;
     font-weight: 500;
+} */
+
+
+
+/* Add your existing CSS styles here */
+
+/* Style the active link in the navbar */
+.nav-links.active {
+    color: white; /* Change this to the color you want for the active link */
+    /* Add any other styles you want for the active link */
 }
 
 /*  */
@@ -400,25 +411,29 @@ ul li a.nav-link:hover:after {
 .card-slider {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+
+    border: 1px solid orange;
+    margin-bottom: 20px;
+
+   
 }
 
 .cards {
-    display: block;
-   
     display: flex;
-   
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
 
-    /* border: 1px solid orange; */
-    width: 612px;
+    border: 3px solid pink;
+
     margin-bottom: 15px;
+
+    width: 690px;
 }
 
 .card-row {
     display: flex;
     
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
 }
 
 /* navigation  */
@@ -442,7 +457,7 @@ ul li a.nav-link:hover:after {
 }
 
 .btn:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .btn:focus {
@@ -457,11 +472,14 @@ ul li a.nav-link:hover:after {
 /*  */
 
 .card-info {
-    width: 450px;
-    padding-right: 5%;
-    padding-left: 30%;
-    
+    width: 500px;
+    padding-left: 100px;
+    border: 1px solid lightblue;
+}
 
+.block {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 /* projects card */
@@ -474,7 +492,7 @@ ul li a.nav-link:hover:after {
     border-radius: 29px;
     box-shadow: 0 8px 6px -6px black;
 
-    border: 4px solid pink;
+    border: 4px solid purple;
 }
 
 .lens {

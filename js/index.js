@@ -34,12 +34,6 @@ leftButton.addEventListener("click", prevCard);
 
 
 
-
-
-
-
-
-
 // const navLink = document.querySelectorAll('.nav-link');
 // const windowPathname = window.location.pathname;
 
