@@ -1,35 +1,35 @@
-const cardSlider = document.querySelector(".card-slider");
-const cardsContainer = document.querySelector("#cards");
+// const cardSlider = document.querySelector(".card-slider");
+// const cardsContainer = document.querySelector("#cards");
 
-const leftButton = document.getElementById("left");
-const rightButton = document.getElementById("right");
+// const leftButton = document.getElementById("left");
+// const rightButton = document.getElementById("right");
 
-const cardWidth = cardsContainer.querySelector(".card-row").offsetWidth;
+// const cardWidth = cardsContainer.querySelector(".card-row").offsetWidth;
 
-let currentCardIndex = 0;
+// let currentCardIndex = 0;
 
-function slideCards() {
-    cardsContainer.style.transform = `translateX(-${cardWidth * currentCardIndex}px)`;  
-}
+// function slideCards() {
+//     cardsContainer.style.transform = `translateX(-${cardWidth * currentCardIndex}px)`;  
+// }
 
-function nextCard() {
-    currentCardIndex++;   
-    if (currentCardIndex >= cardsContainer.children.length) {
-        currentCardIndex = 0;
-    }
-    slideCards();
-}
+// function nextCard() {
+//     currentCardIndex++;   
+//     if (currentCardIndex >= cardsContainer.children.length) {
+//         currentCardIndex = 0;
+//     }
+//     slideCards();
+// }
 
-function prevCard() {
-    currentCardIndex--;
-    if (currentCardIndex < 0) {
-        currentCardIndex = cardsContainer.children.length - 1;
-    }
-    slideCards();
-}
+// function prevCard() {
+//     currentCardIndex--;
+//     if (currentCardIndex < 0) {
+//         currentCardIndex = cardsContainer.children.length - 1;
+//     }
+//     slideCards();
+// }
 
-rightButton.addEventListener("click", nextCard);
-leftButton.addEventListener("click", prevCard);
+// rightButton.addEventListener("click", nextCard);
+// leftButton.addEventListener("click", prevCard);
 
 
 

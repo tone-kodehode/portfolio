@@ -11,6 +11,8 @@
     --light-color: #D9D9D9;
     --dark-color: #030514;
 
+    --white-smoke: #F1F1F1;
+
     --blue: #0d1657;
     --mono-blue-1: #051c6f;
     --mono-blue-2: #062288;
@@ -58,10 +60,6 @@ h3 {
     font-weight: 200;
 }
 
-p {
-    font-size: 18px;
-}
-
 a {
     text-decoration: none;
     position: relative;
@@ -104,7 +102,13 @@ li {
    border: 1px solid pink;  
 }
 
-
+.projects {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    max-width: 1020px;
+    border: 1px solid blue; 
+}
 
 .title {
     font-size: 100px;
@@ -147,9 +151,25 @@ li {
     color: var(--gray)
 }
 
+
 .nav-link:hover {
-    color: var(--light-color);
+    color: var(--mono-gray-2);
+   
 }
+
+
+.fa-brands: :hover {
+    color: var(--mono-gray-2);
+}
+
+.site-logo {
+    font-variant: small-caps;
+}
+
+.contact {
+    font-variant: small-caps;
+}
+
 /*  */
 
 
@@ -217,7 +237,8 @@ ul li a.nav-link:hover:after {
     font-size: 18px;
     position: relative;
     letter-spacing: 1px;
-    margin-right: 20px;
+    margin-right: 5px;
+    font-variant: small-caps;
 }
 
 .action-btn:before {
@@ -400,154 +421,207 @@ ul li a.nav-link:hover:after {
 }
 /*  */
 
-.projects {
-    align-items: center;
-    margin-top: 10px;
-    padding-bottom: 20px;
-    /* border: 1px solid blue; */
-}
-
-/* slider */
-.card-slider {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-
-    border: 1px solid orange;
-    margin-bottom: 20px;
-
-   
+@media screen and (max-width: 768px) {
+    .project-card {
+      flex-basis: calc(50% - 20px);
+    }
 }
 
 .cards {
     display: flex;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
-
-    border: 3px solid pink;
-
-    margin-bottom: 15px;
-
-    width: 690px;
-}
-
-.card-row {
-    display: flex;
-    
-    border: 1px solid yellow;
-}
-
-/* navigation  */
-
-.btn-container {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 
-    /* border: 1px solid lightgreen; */
+    border: 2px solid red; 
 }
 
-.btn {
-    background-color: transparent;
-    color: blue;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    width: 49.4%;
-
-    /* border: 1px solid orange; */
+.projects-card {
+    position: relative;
+    max-width: 400px;
+    background-color: var(--dark-color);
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    /* border: 2px solid red;     */
 }
 
-.btn:hover {
-    opacity: 0.8;
-}
-
-.btn:focus {
-    outline: none;
-}
-
-/* card  */
-
-
-
-
-/*  */
-
-.card-info {
-    width: 500px;
-    padding-left: 100px;
-    border: 1px solid lightblue;
-}
-
-.block {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* projects card */
-.mobile-first {  
-    display: inline-block;
-    width: 180px;
-    height: 370px;
-    margin: auto;
-  
-    border-radius: 29px;
-    box-shadow: 0 8px 6px -6px black;
-
-    border: 4px solid purple;
-}
-
-.lens {
-   
-    border-radius: 25px;
-    background-color: black;
+.projects-description {
     position: absolute;
-    top: 10px;
-    left: 60px;
-    width: 40px;
-    border: 1px solid black;
+    bottom: 0px;
+    width: 80%;
+    height: 20%;
+    background-color: white;
+    left: 10%;
+    text-align: center;
+    transition: 0.5s;
+    overflow: hidden;
+   
 }
 
-.card-img {
-    
-    width: 100%;
-    border: none;
-    height: 100%;
-    border-radius: 26px;
-    border: 6px solid var(--dark-color);
+.card-header {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-text {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 16px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.repository-link {
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+    font-variant: small-caps;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.repository-link:hover {
+    transform: translateY(-5px);
+    background-color: var(--blue); 
+}
+
+.img-projects {
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: 0.5s;
+    border-radius: 5px;
 }
 
 img {
-    width: 180px;
-    height: 370px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s; 
+    /* padding: 5px; */
+}
 
-    /* width: 310;
-    height: 640px; */
+.projects-card:hover .projects-description {
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    border-radius: 5px;
 
-    /* width: 170px;
-    height: 325px; */
+}
 
-    /* z-index: -2;    */
+.projects-card:hover .card-text,
+.projects-card:hover .repository-link {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
 
-    /* w 360 h 640 samsung s5
-    width: 180px;
-    height: 320px;
+
+.projects-card:hover .img-projects {
+    opacity: 0;
+}
+
+/*  */
+
+.project-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+  
+.project-icon .icon {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+  
+.project-icon .icon:hover {
+    transform: scale(1.3) translateY(-5px);
+    color: var(--blue);
+}
+  
+.project-icon .icon-name {
+    display: none;
+}
+  
+.project-icon .icon:hover .icon-name {
+    display: block;
+    text-align: center;
+    font-size: 8px;
+} 
+
+/*  */
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+/*
+    Clean and Minimalist:
+        Use a clean and simple design with ample white space.
+        Employ a consistent color scheme and typography for a cohesive look.
+        Highlight the project name and a brief description.
+
+    Card with Image and Overlay:
+        Create cards with a background image representing each project.
+        Apply a semi-transparent color overlay to the image and place the project name and description on top of it.
+
+    Gradient or Colorful Cards:
+        Use gradients or vibrant colors for eye-catching cards.
+        Ensure the text is easily readable by using contrasting colors.
+
+    Card with Icons:
+        Add small icons representing the type of project (e.g., web, mobile, AI, etc.).
+        Combine the icon with the project name and description.
+
+    Floating Card Effect:
+        Add a subtle box-shadow and increase the z-index on hover to give the cards a floating effect.
+        Include smooth transitions for an interactive feel.
+
+    Material Design Cards:
+        Follow the Material Design principles for a modern and elegant look.
+        Use cards with rounded corners and appropriate shadows.
+
+    Card with Progress Bar:
+        If applicable, display a progress bar showing the completion status of the project.
+        Include other relevant statistics, such as the number of downloads or users.
+
+    Interactive Cards:
+        Add interactive elements, like buttons or hover effects, for more engagement.
+        Consider using flip or slide animations to reveal additional project details.
+
+    Typography-focused Cards:
+        Use attractive typography and creative fonts for the project name.
+        Experiment with different font sizes and styles for headings and descriptions.
+
+    Collapsible Cards:
+        Create cards with an expand/collapse feature to reveal additional information.
+        Include a "Learn More" or "Read More" button.
+
+    Keep your design consistent throughout all project cards and align them with your 
+        overall website or app theme. Use high-quality images and ensure that the text is 
+        legible. Balance aesthetics with usability to create an enjoyable user experience. 
 */
-
-    /* iphone 360 640 */
-
-    /* width: 180;
-    height: 370; */
-    /* width: 360;
-    height: 640; */
-}
-
-.togglePC-onHover {
-    
-}
-
-.pc-content {
-
-}
-
 
 
 
