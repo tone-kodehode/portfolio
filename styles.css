@@ -234,11 +234,11 @@ ul li a.nav-link:hover:after {
     border-radius: 5px;
     text-align: center;
     line-height: 20px;
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
     letter-spacing: 1px;
-    margin-right: 5px;
-    font-variant: small-caps;
+    margin-right: px;
+    text-transform: uppercase;
 }
 
 .action-btn:before {
@@ -441,7 +441,7 @@ ul li a.nav-link:hover:after {
     position: relative;
     max-width: 400px;
     background-color: var(--dark-color);
-    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     /* border: 2px solid red;     */
 }
@@ -455,15 +455,14 @@ ul li a.nav-link:hover:after {
     left: 10%;
     text-align: center;
     transition: 0.5s;
-    overflow: hidden;
-   
+    overflow: hidden;  
 }
 
 .card-header {
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 8px;
-    text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
+    text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card-text {
@@ -484,7 +483,7 @@ ul li a.nav-link:hover:after {
     margin: 10px;
     transition: 0.5s;
     opacity: 0;
-    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
     font-variant: small-caps;
     transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
@@ -536,10 +535,19 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
+    text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.3);
 }
   
 .project-icon .icon {
+    /* display: flex; */
+    font-size: 18px;
+    color: var(--dark-color);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.project-icon .icon .dark-theme{
+    /* display: flex; */
     font-size: 18px;
     color: var(--dark-color);
     margin: 10px;
@@ -550,18 +558,38 @@ img {
     transform: scale(1.3) translateY(-5px);
     color: var(--blue);
 }
+
   
 .project-icon .icon-name {
     display: none;
+    font-size: 8px;
 }
-  
+
 .project-icon .icon:hover .icon-name {
+    position: absolute;
     display: block;
     text-align: center;
-    font-size: 8px;
+    
 } 
 
 /*  */
+
+.icon-container {
+   
+    
+}
+
+.icon-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.icon {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+}
   
   
   
