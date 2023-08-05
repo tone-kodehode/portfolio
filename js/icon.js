@@ -1,4 +1,4 @@
-import iconsData from './iconsData.js';
+//import iconsData from './iconsData.js';
 
 // generate the icons
 function createIcon(iconData) {
@@ -35,14 +35,21 @@ function createIconElement(iconClass) {
 // create icons  
 const iconsUl = document.createElement("ul");
 iconsUl.classList.add("icon-list");
-
-iconsData.forEach((iconData) => {
+  
+iconDataArray.forEach((iconData) => {
     const iconLi = createIcon(iconData);
     iconsUl.appendChild(iconLi);
+
+  // Add a class to the icon element based on the parent container
+    if (iconData.darkOnCards) {
+        iconLi.firstChild.classList.add("dark-icon");
+    } else {
+        iconLi.firstChild.classList.add("light-icon");
+    }
 });
 
 const iconContainer = document.createElement("aside");
-iconContainer.classList.add("project-icon");
+iconContainer.classList.add("icon-container");
 iconContainer.appendChild(iconsUl);
 
   
