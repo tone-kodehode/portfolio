@@ -9,9 +9,13 @@
 
 :root {
     --light-color: #D9D9D9;
+    --white-smoke: #F1F1F1;
+    --white: white;
+
     --dark-color: #030514;
 
-    --white-smoke: #F1F1F1;
+ 
+    --gold-Complementary-0d1657: #574e0d;
 
     --blue: #0d1657;
     --mono-blue-1: #051c6f;
@@ -21,7 +25,8 @@
     --tints-blue-1: #1d2d67;
     --tints-blue-2: #364478;
     --tints-blue-3: #4f5b89;
- 
+    
+    --blue-nav-hover: #1d1a8b;
     --purple: #551a8b;
     --mono-purple-1: #621ea0;
     --mono-purple-2: #6f22b6;
@@ -77,7 +82,7 @@ li {
     background-image: 
         linear-gradient(110deg, 
         rgba(1,2,10,0.9696356275303644) 60%, 
-        rgba(13,22,87,1) 100%);           
+        rgba(13,22,87,1) 100%);         
 }
 
 .light-theme {
@@ -99,7 +104,7 @@ li {
    padding: 20px;
    margin: 10px;
    max-width: 500px;
-   border: 1px solid pink;  
+   /* border: 1px solid pink;   */
 }
 
 .projects {
@@ -107,7 +112,7 @@ li {
     padding: 20px;
     margin: 10px;
     max-width: 1020px;
-    border: 1px solid blue; 
+    /* border: 1px solid blue;  */
 }
 
 .title {
@@ -151,24 +156,21 @@ li {
     color: var(--gray)
 }
 
-
-.nav-link:hover {
-    color: var(--mono-gray-2);
-   
+.main-nav .nav-link:hover {
+    color: var(--mono-purple-3); 
 }
 
 
-.fa-brands: :hover {
-    color: var(--mono-gray-2);
-}
+/* .nav-link:hover, .dark-theme {
+    color: var(--light-color);  
+} */
 
-.site-logo {
+
+.site-logo, .contact {
     font-variant: small-caps;
 }
 
-.contact {
-    font-variant: small-caps;
-}
+
 
 /*  */
 
@@ -181,13 +183,11 @@ li {
 
 
 
-/* Add your existing CSS styles here */
 
-/* Style the active link in the navbar */
-.nav-links.active {
-    color: white; /* Change this to the color you want for the active link */
-    /* Add any other styles you want for the active link */
-}
+/* .nav-links.active {
+    color: white; 
+   
+} */
 
 /*  */
 
@@ -197,7 +197,7 @@ ul li a.nav-link:before {
     content: "";
     width: 0;
     height: 2px;
-    background-color: var(--purple);
+    background-color: var(--mono-purple-3);
     position: absolute;
     top: 120%;
     left: 0;
@@ -208,7 +208,7 @@ ul li a.nav-link:after {
     content: "";
     width: 0;
     height: 2px;
-    background-color: var(--blue);
+    background-color: var(--mono-blue-3);
     position: absolute;
     top: 120%;
     right: 0;
@@ -228,7 +228,7 @@ ul li a.nav-link:hover:after {
 
 
 /* action btn animation */
-.action-btn {
+/* .action-btn {
     margin-top: 40px;
     float: right;
     border-radius: 5px;
@@ -256,7 +256,7 @@ ul li a.nav-link:hover:after {
     content: "";
     width: 0;
     height: 2px;
-    background-color: var(--blue);
+    background-color: #1d1a8b;
     position: absolute;
     top: 120%;
     right: 0;
@@ -271,7 +271,7 @@ ul li a.nav-link:hover:after {
 .action-btn:hover:after {
     width: 50%;
     transform: translateX(-100%)
-}
+} */
 /*  */
 
 
@@ -404,28 +404,8 @@ ul li a.nav-link:hover:after {
     animation-delay: 0.2s;
 }
 
-.animation-effect span:nth-child(14) {
-    top: 130px;
-    left: 130px;
-    bottom: 130px;
-    right: 130px;
-    animation-delay: 0.1s;
-}
-
-.animation-effect span:nth-child(15) {
-    top: 140px;
-    left: 140px;
-    bottom: 140px;
-    right: 140px;
-    animation-delay: 0s;
-}
 /*  */
 
-@media screen and (max-width: 768px) {
-    .project-card {
-      flex-basis: calc(50% - 20px);
-    }
-}
 
 .cards {
     display: flex;
@@ -443,14 +423,14 @@ ul li a.nav-link:hover:after {
     background-color: var(--dark-color);
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    /* border: 2px solid red;     */
+    /* border: 2px solid red;    */
 }
 
 .projects-description {
     position: absolute;
     bottom: 0px;
     width: 80%;
-    height: 20%;
+    height: 18%;
     background-color: white;
     left: 10%;
     text-align: center;
@@ -461,7 +441,7 @@ ul li a.nav-link:hover:after {
 .card-header {
     font-size: 20px;
     text-transform: uppercase;
-    margin-top: 8px;
+    margin: 8px 0;
     text-shadow:  10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -469,6 +449,7 @@ ul li a.nav-link:hover:after {
     width: 80%;
     margin: 10px auto;
     font-size: 16px;
+    font-style: italic;
     transition: 0.5s;
     opacity: 0;
 }
@@ -485,12 +466,16 @@ ul li a.nav-link:hover:after {
     opacity: 0;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
     font-variant: small-caps;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .repository-link:hover {
-    transform: translateY(-5px);
-    background-color: var(--blue); 
+    transform: scale(1.3) translateY(-2px);
+    background-color: var(--mono-blue-1); 
+}
+
+.icon-name {
+    padding: 5px;
 }
 
 .img-projects {
@@ -542,31 +527,26 @@ img {
     /* display: flex; */
     font-size: 18px;
     color: var(--dark-color);
-    margin: 10px;
+    padding: 10px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.project-icon .icon .dark-theme{
-    /* display: flex; */
-    font-size: 18px;
-    color: var(--dark-color);
-    margin: 10px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
   
 .project-icon .icon:hover {
     transform: scale(1.3) translateY(-5px);
-    color: var(--blue);
+    color: var(--mono-blue-1);
 }
 
   
 .project-icon .icon-name {
     display: none;
     font-size: 8px;
+    
+    
 }
 
 .project-icon .icon:hover .icon-name {
-    position: absolute;
+    /* position: absolute; */
     display: block;
     text-align: center;
     
@@ -574,82 +554,15 @@ img {
 
 /*  */
 
-.icon-container {
-   
-    
-}
 
-.icon-list {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.icon {
-    display: block;
-    font-size: 20px;
-    margin-top: 20px;
-}
   
-  
-  
-  
+@media screen and (max-width: 768px) {
+    .project-card {
+      flex-basis: calc(50%);
+    }
+} 
   
 
-
-
-
-
-
-
-
-
-/*
-    Clean and Minimalist:
-        Use a clean and simple design with ample white space.
-        Employ a consistent color scheme and typography for a cohesive look.
-        Highlight the project name and a brief description.
-
-    Card with Image and Overlay:
-        Create cards with a background image representing each project.
-        Apply a semi-transparent color overlay to the image and place the project name and description on top of it.
-
-    Gradient or Colorful Cards:
-        Use gradients or vibrant colors for eye-catching cards.
-        Ensure the text is easily readable by using contrasting colors.
-
-    Card with Icons:
-        Add small icons representing the type of project (e.g., web, mobile, AI, etc.).
-        Combine the icon with the project name and description.
-
-    Floating Card Effect:
-        Add a subtle box-shadow and increase the z-index on hover to give the cards a floating effect.
-        Include smooth transitions for an interactive feel.
-
-    Material Design Cards:
-        Follow the Material Design principles for a modern and elegant look.
-        Use cards with rounded corners and appropriate shadows.
-
-    Card with Progress Bar:
-        If applicable, display a progress bar showing the completion status of the project.
-        Include other relevant statistics, such as the number of downloads or users.
-
-    Interactive Cards:
-        Add interactive elements, like buttons or hover effects, for more engagement.
-        Consider using flip or slide animations to reveal additional project details.
-
-    Typography-focused Cards:
-        Use attractive typography and creative fonts for the project name.
-        Experiment with different font sizes and styles for headings and descriptions.
-
-    Collapsible Cards:
-        Create cards with an expand/collapse feature to reveal additional information.
-        Include a "Learn More" or "Read More" button.
-
-    Keep your design consistent throughout all project cards and align them with your 
-        overall website or app theme. Use high-quality images and ensure that the text is 
-        legible. Balance aesthetics with usability to create an enjoyable user experience. 
-*/
 
 
 

@@ -1,158 +1,118 @@
-// const cardSlider = document.querySelector(".card-slider");
-// const cardsContainer = document.querySelector("#cards");
 
-// const leftButton = document.getElementById("left");
-// const rightButton = document.getElementById("right");
-
-// const cardWidth = cardsContainer.querySelector(".card-row").offsetWidth;
-
-// let currentCardIndex = 0;
-
-// function slideCards() {
-//     cardsContainer.style.transform = `translateX(-${cardWidth * currentCardIndex}px)`;  
-// }
-
-// function nextCard() {
-//     currentCardIndex++;   
-//     if (currentCardIndex >= cardsContainer.children.length) {
-//         currentCardIndex = 0;
-//     }
-//     slideCards();
-// }
-
-// function prevCard() {
-//     currentCardIndex--;
-//     if (currentCardIndex < 0) {
-//         currentCardIndex = cardsContainer.children.length - 1;
-//     }
-//     slideCards();
-// }
-
-// rightButton.addEventListener("click", nextCard);
-// leftButton.addEventListener("click", prevCard);
-
-
-
-
-// const navLink = document.querySelectorAll('.nav-link');
-// const windowPathname = window.location.pathname;
-
-// navLink.forEach(navLink => {
-//     if (navLink.href) {
-//         if (navLink.href.startsWith("mailto:")) {
-           
-//             return;
-//         }
-
-//         if (navLink.getAttribute('href') === "#") {
-            
-//             if (windowPathname === '/index.html' && window.location.hash === "") {
-//                 navLink.classList.add('active');
-//                 console.log(navLink, 'active');
-//             } else {
-//                 navLink.classList.remove('active');
-//                 console.log(navLink, 'remove');
-//             }
-//         } else {
-           
-//             try {
-//                 const navLinkPathname = new URL(navLink.href).pathname;
-
-//                 if (windowPathname === navLinkPathname) {
-//                     navLink.classList.add('active');
-//                     console.log(navLink, 'active');
-//                 } else {
-//                     navLink.classList.remove('active');
-//                     console.log(navLink, 'remove');
-//                 }
-//             } catch (error) {
-//                 console.error(`Invalid URL: ${navLink.href}`);
-//             }
-//         }
-//     }
-// });
-
-
-
-// const navLink = document.querySelectorAll('.nav-link');
-// const windowPathname = window.location.pathname;
-
-// function markActiveLink(){
-//     navLink.forEach(navLink => {
-//         const a = window.location.href.includes(navLink.href)
-//             console.log(a, window.location.fragment)
-//                 if (a) {
-//                     navLink.classList.add('active');
-//                     console.log(navLink, 'active');
-//                 } else {
-//                     navLink.classList.remove('active');
-//                     console.log(navLink, 'remove');
-//                 }
-//     });
-// }
-
-// const navLink = document.querySelectorAll('.nav-link');
-// const currentPage = window.location.href;
-// const windowPathname = window.location.pathname;
-
-// console.log(currentPage);
-
-// navLink.forEach((link) => {
-//     console.log('WTF?');
-//     if (link.href == currentPage) {
-//         link.classList.add('active');
-//         console.log(link, 'active');
-//     } else {
-//         link.classList.remove('active')
-//         console.log(link, 'remove');
-//     }
-// })
-
-
-
-
-// const navLink = document.querySelectorAll('.nav-link')
-// const location = window.location.pathname;
-
-// function locationHashChanged() {
-//     if (navLink.getAttribute('href') === "#home") {
-//         navLink.classList.add('active')
-//     } else {
-//         navLink.classList.remove('active')
-//     }
-//   }
+const projects = [
+    {
+      title: "Flowers & Garden",
+      imgSrc: "img/Skjermbilde 2023-07-29 kl. 17.33.27.png",
+      description: "Working with reusable component in React, simplified and advance towards the practical approach to scalable code implementation.",
+      githubLink: "https://github.com/project1",
+      liveViewLink: "https://project1.example.com",
+      icons: ["fa-react", "fa-js", "fa-html5", "fa-css3-alt", "fa-figma"],
+    },
+    {
+      title: "titel",
+      imgSrc: "img/Skjermbilde 2023-07-29 kl. 17.33.27.png",
+      description: "Description of Project 2",
+      githubLink: "https://github.com/project2",
+      liveViewLink: "https://project2.example.com",
+      icons: ["fa-js", "fa-react"],
+    },
+    
+  ];
   
-//   window.addEventListener("hashchange", locationHashChanged);
+  // Get the page container element
+  const container = document.getElementById("cards");
+  
+  // create a single card element
+  function createCard(cardData) {
+    const card = document.createElement("article");
+    card.classList.add("projects-card");
+  
+    const img = document.createElement("img");
+    img.classList.add("img-projects");
+    img.src = cardData.imgSrc;
+    img.alt = cardData.title;
+  
+    const cardDescription = document.createElement("aside");
+    cardDescription.classList.add("projects-description");
+  
+    const header = document.createElement("h4");
+    header.classList.add("card-header");
+    header.textContent = cardData.title;
+  
+    const iconsUl = document.createElement("ul");
+    iconsUl.classList.add("project-icon");
+  
+    cardData.icons.forEach((iconClass) => {
+      const iconLi = document.createElement("li");
+      iconLi.classList.add("icon");
+  
+      const icon = document.createElement("i");
+      icon.classList.add("fa-brands", iconClass);
+
+      iconLi.appendChild(icon);
+
+
+  
+      iconsUl.appendChild(iconLi);
+    });
+  
+    const p = document.createElement("p");
+    p.classList.add("card-text");
+    p.textContent = cardData.description;
+  
+    const githubLink = createLink("repository-link", cardData.githubLink, "GitHub", "fa-github");
+    const liveViewLink = createLink("repository-link", cardData.liveViewLink, "Live view", "fa-github");
+  
+    cardDescription.appendChild(header);
+    cardDescription.appendChild(iconsUl);
+    cardDescription.appendChild(p);
+    cardDescription.appendChild(githubLink);
+    cardDescription.appendChild(liveViewLink);
+  
+    card.appendChild(img);
+    card.appendChild(cardDescription);
+    container.appendChild(card); 
+  
+    return card;
+  }
+  
+  // create a link element
+  function createLink(className, href, text, iconClass) {
+    const link = document.createElement("a");
+    link.classList.add(className);
+    link.href = href;
+  
+    const icon = document.createElement("i");
+    icon.classList.add("fa-brands", iconClass);
+  
+    const span = document.createElement("span");
+    span.classList.add("icon-name");
+    span.textContent = text;
+  
+    link.appendChild(icon);
+    link.appendChild(span);
+  
+    return link;
+  }
+  
+  // create and append all cards
+  function createCards() {
+    projects.forEach((project) => {
+      createCard(project); 
+    });
+  }
+  
+  // Call
+  createCards();
+  
+
+
+  
 
 
 
 
-// const navLink = document.querySelectorAll(".nav-link");
 
-// window.addEventListener("hashchange", () => {
-//   const currentLocation = window.location.hash;
-//   navLink.forEach((navLink) => {
-//     if (navLink.getAttribute("href") === currentLocation) {
-//       navLink.classList.add("active");
-//     } else {
-//       navLink.classList.remove("active");
-//     }
-//   });
-// });
-
-
-// const navLink = document.querySelectorAll(".nav-link");
-
-// window.addEventListener("hashchange", () => {
-//   const currentLocation = window.location.hash;
-//   navLink.forEach((navLink) => {
-//     if (navLink.getAttribute("href") === currentLocation) {
-//       navLink.classList.add("active");
-//     } else {
-//       navLink.classList.remove("active");
-//     }
-//   });
-// });
 
 
 
