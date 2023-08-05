@@ -1,29 +1,12 @@
 
-const projects = [
-    {
-      title: "Flowers & Garden",
-      imgSrc: "img/Skjermbilde 2023-07-29 kl. 17.33.27.png",
-      description: "Working with reusable component in React, simplified and advance towards the practical approach to scalable code implementation.",
-      githubLink: "https://github.com/project1",
-      liveViewLink: "https://project1.example.com",
-      icons: ["fa-react", "fa-js", "fa-html5", "fa-css3-alt", "fa-figma"],
-    },
-    {
-      title: "titel",
-      imgSrc: "img/Skjermbilde 2023-07-29 kl. 17.33.27.png",
-      description: "Description of Project 2",
-      githubLink: "https://github.com/project2",
-      liveViewLink: "https://project2.example.com",
-      icons: ["fa-js", "fa-react"],
-    },
-    
-  ];
+import projectsData from './projectsData.js';
+
   
-  // Get the page container element
-  const container = document.getElementById("cards");
+// Get the page container element
+const container = document.getElementById("cards");
   
-  // create a single card element
-  function createCard(cardData) {
+// create a single card element
+function createCard(cardData) {
     const card = document.createElement("article");
     card.classList.add("projects-card");
   
@@ -43,17 +26,17 @@ const projects = [
     iconsUl.classList.add("project-icon");
   
     cardData.icons.forEach((iconClass) => {
-      const iconLi = document.createElement("li");
-      iconLi.classList.add("icon");
+        const iconLi = document.createElement("li");
+        iconLi.classList.add("icon");
   
-      const icon = document.createElement("i");
-      icon.classList.add("fa-brands", iconClass);
+        const icon = document.createElement("i");
+        icon.classList.add("fa-brands", iconClass);
 
-      iconLi.appendChild(icon);
+        iconLi.appendChild(icon);
 
 
   
-      iconsUl.appendChild(iconLi);
+        iconsUl.appendChild(iconLi);
     });
   
     const p = document.createElement("p");
@@ -74,10 +57,10 @@ const projects = [
     container.appendChild(card); 
   
     return card;
-  }
+}
   
   // create a link element
-  function createLink(className, href, text, iconClass) {
+function createLink(className, href, text, iconClass) {
     const link = document.createElement("a");
     link.classList.add(className);
     link.href = href;
@@ -93,17 +76,17 @@ const projects = [
     link.appendChild(span);
   
     return link;
-  }
+}
   
-  // create and append all cards
-  function createCards() {
-    projects.forEach((project) => {
-      createCard(project); 
+// create and append all cards
+function createCards() {
+    projectsData.forEach((project) => {
+        createCard(project); 
     });
-  }
+}
   
-  // Call
-  createCards();
+// Call
+createCards();
   
 
 
