@@ -61,6 +61,10 @@ h1 {
     font-weight: 400;
 }
 
+h2 {
+    font-weight: 300;
+}
+
 h3 {
     font-weight: 200;
 }
@@ -104,7 +108,7 @@ li {
    padding: 20px;
    margin: 10px;
    max-width: 500px;
-   /* border: 1px solid pink;   */
+   border: 1px solid pink;  
 }
 
 .projects {
@@ -404,13 +408,13 @@ ul li a.nav-link:hover:after {
     animation-delay: 0.2s;
 }
 
-/*  */
+/* Projects page */
 
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 
@@ -540,9 +544,7 @@ img {
   
 .project-icon .icon-name {
     display: none;
-    font-size: 8px;
-    
-    
+    font-size: 8px;  
 }
 
 .project-icon .icon:hover .icon-name {
@@ -552,19 +554,51 @@ img {
     
 } 
 
-.dark-icon {
-    color: var(--dark-color);
-  }
-  
+/* About page */
 
-.light-icon {
+.article .light-icon a {
+    color: var(--light-color); 
+}
+
+.article .light-icon:hover a {
+    color: var(--purple); 
+}
+
+.contact-link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;  
+}
+
+.contact-link a {
     color: var(--light-color);
+}
+
+.contact-link:hover .mail {
+    color: var(--purple);
+}
+
+.program-icon {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    font-size: 40px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out;
+
+    border: 2px solid pink;
+}
+
+.program-icon .icon:hover {
+    transform: scale(1.2);
+    color: var(--purple);
 }
 
 /*  */
 
-
-  
 @media screen and (max-width: 768px) {
     .project-card {
       flex-basis: calc(50%);
