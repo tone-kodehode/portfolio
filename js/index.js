@@ -1,6 +1,5 @@
 import projectsData from './projectsData.js';
 
-
   
 // Get the page container element
 const container = document.getElementById("cards");
