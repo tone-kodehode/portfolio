@@ -637,10 +637,6 @@ img {
         flex-wrap: wrap;
     }
 
-    .main-nav {
-        flex-basis: calc(50%);
-    } 
-
     .article {
         flex-basis: calc(50%); 
     }
