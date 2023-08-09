@@ -541,14 +541,12 @@ img {
     padding: 10px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
   
 .project-icon .icon:hover {
     transform: scale(1.3) translateY(-5px);
     color: var(--mono-blue-1);
 }
-
-  
+ 
 .project-icon .icon-name {
     display: none;
     font-size: 8px;  
@@ -558,7 +556,6 @@ img {
     /* position: absolute; */
     display: block;
     text-align: center;
-    
 } 
 
 /* About page */
@@ -594,10 +591,11 @@ img {
     gap: 30px;
     font-size: 40px;
     margin-bottom: 30px;
+    padding-right: 20px; 
     transition: transform 0.2s ease-in-out;
-
     /* border: 2px solid pink; */
 }
+
 
 
 .program-icon .icon-container:hover .icon-name {
