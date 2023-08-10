@@ -80,7 +80,6 @@ li {
 
 .dark-theme {
     min-height: 100vh;
-  
     color: var(--light-color);
     background: rgb(1,2,10);
     background-image: 
@@ -102,6 +101,10 @@ li {
     align-items: center;
     overflow-y: scroll;
     flex-wrap: wrap;
+}
+
+.container {
+    overflow-y: hidden;
 }
 
 .article {  
@@ -182,7 +185,14 @@ li {
 
 .site-logo .contact {
     font-variant: small-caps;
-    gap: 30px;
+}
+
+.site-logo {
+    margin-right: 30px; 
+}
+
+.contact {
+    margin-left: 30px;
 }
 
 /*  */
@@ -636,7 +646,9 @@ img {
 /*  */
 
 @media screen and (max-width: 768px) {
-    
+    .main-nav {
+        width: 50%
+    }
 
 } 
 
