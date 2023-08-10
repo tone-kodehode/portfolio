@@ -119,10 +119,6 @@ li {
    /* border: 1px solid pink;   */
 }
 
-/* #about .container {
-    flex-wrap: wrap;
-} */
-
 .projects {
     flex: 1;
     padding: 20px;
@@ -162,6 +158,9 @@ li {
     bottom: 0;
     /* border: 1px solid pink; */
     z-index: 99;
+
+    background-color: rgba(3, 5, 20, 0.193);
+    align-items: center;
 }
 
 .nav-link {
@@ -170,11 +169,12 @@ li {
     gap: 30px;
     font-weight: 400;
     color: #979797;
-    color: var(--gray);
+    color: var(--mono-gray-3);
 }
 
 .main-nav .nav-link:hover {
-    color: var(--mono-purple-3); 
+    /* color: var(--mono-purple-3);  */
+    color: var(--white-smoke);
 }
 
 
