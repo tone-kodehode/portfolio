@@ -441,7 +441,7 @@ ul li a.nav-link:hover:after {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 

@@ -15,6 +15,14 @@ const projectsData = [
       liveViewLink: "https://tone-kodehode.github.io/jsPiano/",
       icons: ["fa-js", "fa-css3"],
     },
+    {
+      title: "Note App",
+      imgSrc: "img/Skjermbilde 2023-08-11 kl. 17.44.05.png",
+      description: "The note app store data in the browser with localStorage. Storing data from user continues after the browser is closed.",
+      githubLink: "https://github.com/tone-kodehode/note-app.git",
+      liveViewLink: " https://tone-kodehode.github.io/note-app/",
+      icons: ["fa-js", "fa-html5", "fa-css3"],
+    },
 
   ];
   
