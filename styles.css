@@ -124,7 +124,6 @@ li {
     padding: 20px;
     margin: 10px;
     max-width: 1020px;
-
     margin-bottom: 50px;
     /* border: 1px solid blue;  */
 }
@@ -651,6 +650,12 @@ img {
     }
 
 } 
+
+/* @media screen and (min-width: 1024px) {
+    .projects .projects-card {
+        flex-basis: calc(33.33% - 20px); 
+    }
+} */
 
 
 

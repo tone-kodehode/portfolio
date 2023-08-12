@@ -10,7 +10,7 @@ const projectsData = [
     {
       title: "JS Piano",
       imgSrc: "img/Skjermbilde 2023-08-11 kl. 16.27.55.png",
-      description: "Learning how to create a webapp with some form of clickable buttons in JavaScript. Where each button play specific sound on click and keypress.",
+      description: "A web app created in JavaScript to illustrates the flexibility that JavaScript affords. Where clickable buttons play specific sound on click and keypress as a response to user interaction.",
       githubLink: "https://github.com/tone-kodehode/jsPiano.git",
       liveViewLink: "https://tone-kodehode.github.io/jsPiano/",
       icons: ["fa-js", "fa-css3"],
@@ -18,7 +18,7 @@ const projectsData = [
     {
       title: "Note App",
       imgSrc: "img/Skjermbilde 2023-08-11 kl. 17.44.05.png",
-      description: "The note app store data in the browser with localStorage. Storing data from user continues after the browser is closed.",
+      description: "Note app that store data in the browser with the use of localStorage. Data from user continues being stored in the browser after the browser is closed. The browser set and removed data.",
       githubLink: "https://github.com/tone-kodehode/note-app.git",
       liveViewLink: " https://tone-kodehode.github.io/note-app/",
       icons: ["fa-js", "fa-html5", "fa-css3"],
