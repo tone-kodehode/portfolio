@@ -5,7 +5,7 @@ const projectsData = [
       description: "Shop project in progress. Working with reusable component in React, simplified and advance towards the practical approach to scalable code implementation.",
       githubLink: "https://github.com/",
       liveViewLink: "https://",
-      icons: ["fa-react", "fa-js", "fa-html5", "fa-css3-alt", "fa-figma"],
+      icons: ["fa-react", "fa-js", "fa-html5", "fa-css3", "fa-figma"],
     },
     {
       title: "JS Piano",
