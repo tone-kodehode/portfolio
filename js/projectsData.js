@@ -2,7 +2,7 @@ const projectsData = [
     {
       title: "Flowers & Garden",
       imgSrc: "img/Skjermbilde 2023-07-29 kl. 17.33.27.png",
-      description: "Shop project in progress. Working with reusable component in React, simplified and advance towards the practical approach to scalable code implementation.",
+      description: "Shop project in progress. Working with reusable component in React, and avoid repeating code gave a practical approach towards scalable code implementation.",
       githubLink: "https://github.com/",
       liveViewLink: "https://",
       icons: ["fa-react", "fa-js", "fa-html5", "fa-css3", "fa-figma"],
@@ -18,7 +18,7 @@ const projectsData = [
     {
       title: "Note App",
       imgSrc: "img/Skjermbilde 2023-08-11 kl. 17.44.05.png",
-      description: "Note app that store data in the browser with the use of localStorage. Data from user continues being stored in the browser after the browser is closed. The browser set and removed data.",
+      description: "Note app that stores data in the browser with the use of localStorage. Data from user continues being stored in the browser after the browser is closed.",
       githubLink: "https://github.com/tone-kodehode/note-app.git",
       liveViewLink: " https://tone-kodehode.github.io/note-app/",
       icons: ["fa-js", "fa-html5", "fa-css3"],
