@@ -231,7 +231,7 @@ ul li a.nav-link:hover:after {
 /* action btn animation */
 
 .action-btn {
-    margin-top: 30px;
+    margin-top: 50px;
     border: none;
     padding: 6px 8px;
     background-color: rgba(84, 26, 139, 0.635);
@@ -433,7 +433,6 @@ img {
 .contact-link {
     display: flex;
     margin-top: 30px;
-    gap: 10px; 
     text-transform:  
 }
 
@@ -456,6 +455,7 @@ img {
 
 .article .contact-link .icon {
     margin-top: 10px;
+    margin-right: 30px;
 }
 
 .program-icon {
