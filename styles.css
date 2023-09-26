@@ -127,7 +127,6 @@ li {
 }
 
 .projects-intro {
-  
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -138,18 +137,14 @@ li {
 }
 
 .projects-intro {
-    /* padding: 100px 30px; */
-    
+    /* padding: 100px 30px; */  
     border-radius: 5px; 
     background-color: var(--light-color);
     height: 300px;
     margin: 180px 20px;
-    
+    padding: 30px;   
 }
 
-.intro-color {
-    background-color: var(--dark-color);
-}
 
 .program-text {
     
@@ -184,7 +179,8 @@ li {
     bottom: 0;
     /* border: 1px solid pink; */
     z-index: 99;
-    background: linear-gradient(to top, rgba(3, 5, 20, 0.613) 80%);
+    background: rgba(3, 5, 20, 0.702);
+    backdrop-filter: blur(5px);
     /* background-color: rgba(3, 5, 20, 0.693); */
     align-items: center;
 }
@@ -278,7 +274,6 @@ ul li a.nav-link:hover:after {
     position: relative;
     text-align: center;
     cursor: pointer;
-
     width: fit-content;
 }
 
@@ -346,7 +341,6 @@ ul li a.nav-link:hover:after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
- 
 }
 
 .projects-card {
@@ -365,12 +359,10 @@ ul li a.nav-link:hover:after {
     left: 50%;
     width: 40%;
     height: 50%;
-    background-color: rgba(217, 217, 217, 0.594);
+    background-color: rgba(217, 217, 217, 0.754);
     border: 1px solid var(--white-smoke);
-
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-
     /* position: absolute;
     bottom: 0px;
     width: 80%;
@@ -383,7 +375,7 @@ ul li a.nav-link:hover:after {
 }
 
 .projects-description:hover {
-    background-color: rgba(217, 217, 217, 0.894);
+    background-color: rgba(217, 217, 217, 0.954);
 }
 
 .card-header {
@@ -432,8 +424,7 @@ ul li a.nav-link:hover:after {
     margin: 10px;
     background-color: var(--white-smoke);
     color: var(--dark-color);
-    transition: transform 0.2s ease, color 0.2s ease;
-    
+    transition: transform 0.2s ease, color 0.2s ease; 
 }
 
 /* .repository-link { 
@@ -516,12 +507,10 @@ img {
 } */
 
 .project-icon {
-  
     cursor: pointer;
     position: absolute;
     top: 20%;
     left: 18%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -592,19 +581,13 @@ img {
  .program-icon {
     align-self: center;
     color: var(--dark-color);
-
     display: grid;
     grid-template-columns: auto auto auto;
-    
     /* justify-content: space-around; */
-   
     gap: 30px 50px;
-    
     font-size: 40px;
     /* margin-bottom: 30px; */
-    
     transition: transform 0.2s ease-in-out;
-
     cursor: context-menu;
     
 
@@ -612,9 +595,6 @@ img {
 
 .icon-container {
     justify-self: center;
-
-    
-    
     /* justify-content: space-around; */
 }
 
