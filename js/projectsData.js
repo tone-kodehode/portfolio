@@ -21,7 +21,7 @@ const projectsData = [
     id: "section3-cards",
     title: "LocalStorage",
     imgSrc: "img/Skjermbilde 2023-09-26 kl. 09.37.38.png",
-    description: "Note app that stores data in the browser with the use of localStorage. Users input continues being stored in the browser after the browser is closed.",
+    description: "Note app that stores data in the browser with the use of localStorage. Users input continues being stored after the browser is closed.",
     githubLink: "https://github.com/tone-kodehode/note-app",
     liveViewLink: "https://tone-kodehode.github.io/note-app",
     icons: ["fa-js", "fa-html5", "fa-css3"],
