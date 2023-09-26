@@ -6,7 +6,7 @@ const projectsData = [
     description: "Shop project in progress. I enjoy working with reusable component in React. I am now focusing on implementing MongoDB and Node.js",
     githubLink: "https://github.com/tone-kodehode/react-webpage",
     liveViewLink: "https://tone-kodehode.github.io/react-webpage",
-    icons: ["fa-react", "fa-js", "fa-html5", "fa-css3", "fa-figma"],
+    icons: ["fa-react", "fa-js", "fa-html5", "fa-css3", "fa-node", "fa-database",],
   },
   {
     id: "section2-cards",
