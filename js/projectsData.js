@@ -4,7 +4,7 @@ const projectsData = [
     title: "React shop",
     imgSrc: "img/Skjermbilde 2023-09-26 kl. 09.16.38.png",
     description: "Shop project in progress. I enjoy working with reusable component in React. I am now focusing on implementing MongoDB and Node.js",
-    githubLink: "https://github.com/tone-kodehode/react-webpage",
+    githubLink: "http://localhost:5174/react-webpage/",
     liveViewLink: "https://tone-kodehode.github.io/react-webpage",
     icons: ["fa-react", "fa-js", "fa-html5", "fa-css3", "fa-node", "fa-database",],
   },
