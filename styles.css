@@ -137,11 +137,11 @@ li {
 }
 
 .projects-intro { 
-    
+    /* display: flow-root; */
 }
 
 .program-text {
-    
+    /* display: flow-root; */
 }
 
 .title {
@@ -160,7 +160,7 @@ li {
     line-height: 1.2;
     letter-spacing: 1px;
     text-shadow: ;
-    width: 95%;
+    width: 100%;
 }
 
 /* nav */
@@ -196,11 +196,15 @@ li {
     display: flex;
 } */
 
-.site-logo, .contact, .linked-in {
+.site-logo, .contact, .linked {
     font-variant: small-caps; 
 }
 
-.linked-in {
+.hide {
+    display: none;
+}
+
+.linked {
     color: var(--light-color);
     font-weight: 300;
     letter-spacing: 1px;
@@ -260,7 +264,7 @@ ul li a.nav-link:hover:after {
     background-color: rgba(111, 34, 182, 0.693);
     color: white;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 3px;
     text-transform: uppercase;
     position: relative;
     text-align: center;
@@ -271,7 +275,7 @@ ul li a.nav-link:hover:after {
 .action-btn:before {
     content: "";
     position: absolute;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 24px;
     height: 24px;
     top: -5px;
@@ -284,7 +288,7 @@ ul li a.nav-link:hover:after {
 .action-btn:after {
     content: "";
     position: absolute;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 24px;
     height: 24px;
     bottom: -5px;
@@ -471,7 +475,7 @@ img {
     display: block;
     position: absolute;
     text-align: center;  
-}   */
+}   
 
 /*  */
 
@@ -489,7 +493,7 @@ img {
     }
 
     .main-nav {
-        padding-right: 50px;
+        max-width: 100%;
     }
     
     .main-nav .site-logo,
@@ -497,11 +501,21 @@ img {
         display: none;
     }
 
+    .main-nav .hide .site-logo,
+    .main-nav .hide .contact {
+        display: block;
+        visibility: visible;
+    }
+
     .projects-intro { 
         margin-bottom: 5px;
         border-radius: 3px; 
         margin: 40px 15px;  
         line-height: 1.25;
+    }
+
+    .program-text {
+        font-size: 16px;
     }
 
     img {
