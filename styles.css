@@ -497,7 +497,7 @@ img {
     }
 
     .main-nav {
-        max-width: 100%;
+        width: 100%;
     }
     
     .main-nav .site-logo,
@@ -517,9 +517,12 @@ img {
         margin: 40px 15px;  
         line-height: 1.25;
     }
+    .header {
+        font-size: 25px;
+    }
 
     .program-text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     img {
