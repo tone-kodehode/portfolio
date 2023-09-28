@@ -321,6 +321,10 @@ ul li a.nav-link:hover:after {
 
 /* Projects page */
 
+.wordcloud {
+    /* border: 10px solid pink; */
+}
+
 
 .cards {
     display: flex;

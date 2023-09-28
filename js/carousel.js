@@ -43,7 +43,7 @@ function updateCarousel() {
 
 
 // .carousel {
-//     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
+//     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 //     overflow: hidden;
 //     width: 500px;
 //     margin: 0 auto;
