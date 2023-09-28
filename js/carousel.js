@@ -50,13 +50,3 @@ function updateCarousel() {
 // }
 
 
-{/* <article class="article">
-<h1 class="header">Projects</h1>
-<div class="carousel">
-    <div class="cards" id="cards"></div>
-    <div class="carousel-nav">
-        <i class="fa-solid fa-chevron-left" id="left"></i>
-        <i class="fa-solid fa-chevron-right" id="right"></i>
-    </div>
-</div>      
-</article> */}
