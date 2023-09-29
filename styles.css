@@ -187,7 +187,7 @@ li {
     display: flex;
 } */
 
-.site-logo, .contact, .linked {
+.site-github, .contact, .linked {
     font-variant: small-caps; 
 }
 
@@ -208,6 +208,10 @@ li {
 
 .contact {
     margin-left: 30px;
+}
+
+.site-github {
+    margin-right: 30px;
 }
 /*  */
 
@@ -507,14 +511,18 @@ img {
     .main-nav {
         width: 100%;
     }
+
+    .main-nav, .nav a li {
+        font-size: 12px;
+    }
     
-    .main-nav .site-logo,
+    .main-nav .site-github,
     .main-nav .contact {   
         display: none;
     }
 
-    .main-nav .hide .site-logo,
-    .main-nav .hide .contact {
+    .main-nav .hide,
+    .main-nav .hide {
         display: block;
         visibility: visible;
     }
