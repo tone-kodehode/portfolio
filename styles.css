@@ -338,12 +338,6 @@ ul li a.nav-link:hover:after {
     width: 85%;
 }
 
-.wordcloud {
-    /* margin: 180px 20px; */
-    /* padding-left: 40px; */
-} 
-
-
 .cards {
     display: flex;
     flex-direction: column;
@@ -533,12 +527,10 @@ img {
         visibility: visible;
     }
 
-   
-
     .projects-intro { 
-        margin-bottom: 5px;
-        border-radius: 3px; 
-        margin: 40px 15px;  
+        height: fit-content;
+        margin-top: 50px; 
+        margin-bottom: 0;
         line-height: 1.25;
     }
     .header {
@@ -548,6 +540,10 @@ img {
     .program-text {
         width: 100%;
         font-size: 10px;
+    }
+
+    .wordcloud {
+        padding-bottom: 50px; 
     }
 
     img {
