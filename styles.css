@@ -111,10 +111,6 @@ li {
     flex-wrap: wrap;
 }
 
-/* .container {
-    overflow-y: hidden;
-} */
-
 .article {  
    flex: 1;
    padding: 20px;
@@ -136,7 +132,7 @@ li {
 }
 
 .title {
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1.1;
     padding-bottom: 15px;
     text-shadow: ;
@@ -205,15 +201,6 @@ li {
     display: flex;
     text-align: center;
 }
-
-.contact {
-    margin-left: 30px;
-}
-
-.site-github {
-    margin-right: 30px;
-}
-/*  */
 
 /* nav animation */
 ul li a.nav-link:before {
@@ -417,12 +404,7 @@ ul li a.nav-link:hover:after {
 }
 
 .img-projects {
-      
-}
-
-
-img {
-    max-height: 100vh; 
+    max-height: 100vh;  
 }
 
 .project-icon {
@@ -495,12 +477,6 @@ img {
 
 /*  */
 
-@media screen and (max-width: 768px) {
-
-
-
-
-}
 
 @media screen and (max-width: 768px) {
 
@@ -533,6 +509,7 @@ img {
         margin-bottom: 0;
         line-height: 1.25;
     }
+
     .header {
         font-size: 23px;
     }
