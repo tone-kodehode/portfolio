@@ -4,8 +4,8 @@ const projectsData = [
     title: "React App",
     imgSrc: "img/Skjermbilde 2023-09-26 kl. 09.16.38.png",
     description: "React nettbutikk prosjekt under utvikling. Production klar med produkter, logg inn bruker konto og betalings mulighet.",
-    githubLink: "http://localhost:5174/react-webpage/",
-    liveViewLink: "https://tone-kodehode.github.io/react-webpage",
+    githubLink: "https://github.com/tone-kodehode/react-shop",
+    liveViewLink: "https://tone-kodehode.github.io/react-shop/",
     icons: ["fa-react", "fa-js", "fa-html5", "fa-css3", "fa-node", "fa-database",],
   },
   {
