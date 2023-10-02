@@ -121,16 +121,6 @@ li {
    margin-bottom: 50px;
 }
 
-
-
-.projects-intro { 
-    /* display: flow-root; */
-}
-
-.program-text {
-    /* display: flow-root; */
-}
-
 .title {
     font-size: 70px;
     line-height: 1.1;
@@ -179,9 +169,6 @@ li {
     color: var(--white);
 }
 
-/* .div-nav {
-    display: flex;
-} */
 
 .site-github, .contact, .linked {
     font-variant: small-caps; 
@@ -353,6 +340,7 @@ ul li a.nav-link:hover:after {
     background-color: rgba(217, 217, 217, 0.954);
 }
 
+
 .card-header {
     position: absolute;
     top: 10%;
@@ -404,7 +392,12 @@ ul li a.nav-link:hover:after {
 }
 
 .img-projects {
-    max-height: 100vh;  
+    width: fit-content;  
+}
+
+img {
+    max-width: 100%; 
+    height: auto;   
 }
 
 .project-icon {
