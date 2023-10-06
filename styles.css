@@ -125,7 +125,7 @@ li {
     font-size: 70px;
     line-height: 1.1;
     padding-bottom: 15px;
-    text-shadow: ;
+   
 }
 
 .header {
@@ -136,7 +136,6 @@ li {
     margin-top: 30px;
     line-height: 1.2;
     letter-spacing: 1px;
-    text-shadow: ;
     width: 100%;
 }
 
@@ -184,10 +183,6 @@ li {
     letter-spacing: 1px;
 }
 
-.linked-in .nav-link {
-    display: flex;
-    text-align: center;
-}
 
 /* nav animation */
 ul li a.nav-link:before {
@@ -229,10 +224,10 @@ ul li a.nav-link:hover:after {
 .action-btn {
     margin-top: 50px;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 20px;
     background-color: rgba(111, 34, 182, 0.693);
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 3px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -242,7 +237,8 @@ ul li a.nav-link:hover:after {
     width: fit-content;
 }
 
-.action-btn:before {
+
+/* .action-btn:before {
     content: "";
     position: absolute;
     border-radius: 3px;
@@ -272,7 +268,7 @@ ul li a.nav-link:hover:after {
 .action-btn:hover:after {
     height: 100%;
     width: 100%;
-}
+} */
 
 .action-btn a {
     color: var(--light-color);
@@ -280,13 +276,20 @@ ul li a.nav-link:hover:after {
 }
 
 .action-btn:hover {
-    background-color: rgba(111, 34, 182, 0.993);
+    background-color: rgba(111, 34, 182, 0.893);
+    border-radius: 0;
+    
+}
+
+.action-btn i {
+    margin-left: 10px;
 }
 
 .rowbtn {
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
+
 
 /* Projects page */
 
@@ -305,7 +308,8 @@ ul li a.nav-link:hover:after {
     margin: 180px 20px;
     padding: 30px;  
     /* background-color: rgba(241, 241, 241, 0.89); */
-    line-height: 1.35;
+    line-height: 1.2;
+    letter-spacing: 1px;
 }
 
 .program-text {
@@ -336,9 +340,9 @@ ul li a.nav-link:hover:after {
     border-radius: 5px;
 }
 
-.projects-description:hover {
+/* .projects-description:hover {
     background-color: rgba(217, 217, 217, 0.954);
-}
+} */
 
 
 .card-header {
@@ -368,13 +372,13 @@ ul li a.nav-link:hover:after {
 
 .repository-link {
     top: 80%;
-    left: 14%;
+    left: 15%;
     box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.3);
     font-variant: small-caps;
+    border-radius: 3px;
+    padding: 10px 20px;
     border-radius: 5px;
-    padding: 8px 8px;
-    border-radius: 5px;
-    margin: 10px;
+    margin-right: 40px;
     background-color: var(--white-smoke);
     color: var(--dark-color);
     transition: transform 0.2s ease, color 0.2s ease; 
@@ -388,7 +392,7 @@ ul li a.nav-link:hover:after {
 }
 
 .icon-name {
-    padding: 8px;
+    margin-left: 10px;
 }
 
 .img-projects {
@@ -561,6 +565,7 @@ img {
         padding: 4px;
     }
 }
+
 
 
 
