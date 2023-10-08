@@ -23,21 +23,21 @@ body::-webkit-scrollbar {
     --dark-color: #030514;
 
     --blue: #0d1657;
+    --blueTint: #3D4478;
 
     --tints-blue-1: #252d67;
     --tints-blue-2: #3d4478;
     --tints-blue-3: #555b89;
     
     --purple: #3d078a;
-    --purpleTint: #7751AD;
+    --purpleTint: #6338A1;
+
     --blueTint: #3D4478;
     --grayNav: #d8d8d8;
 
     --purpleHover: #8b68bd;
     --blueHover: #84879F; 
   
-    
-   
 }
 
 h1 {
