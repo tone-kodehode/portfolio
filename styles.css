@@ -29,11 +29,12 @@ body::-webkit-scrollbar {
     --tints-blue-3: #555b89;
     
     --purple: #3d078a;
+    --purpleTint: #7751AD;
     --blueTint: #3D4478;
     --grayNav: #d8d8d8;
 
-    /* --purpleHover: #8b68bd;
-    --blueHover: #84879F; */
+    --purpleHover: #8b68bd;
+    --blueHover: #84879F; 
   
     
    
@@ -134,8 +135,8 @@ li {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
     color: #979797;
     color: var(--grayNav);
 }
@@ -216,11 +217,11 @@ ul li a.nav-link:hover:after {
 
 .action-btn a {
     color: var(--light-color);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .action-btn:hover {
-    background-color: var(--blueTint);
+    background-color: var(--purpleTint);
     border-radius: 0;
     
 }
