@@ -329,7 +329,7 @@ ul li a.nav-link:hover:after {
     color: var(--white);
     border-radius: 0;
     transform: scale(1.1) translateY(-1px);
-    background-color: var(--blueTint); 
+    background-color: var(--purple); 
 }
 
 .icon-name {
